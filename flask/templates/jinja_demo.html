@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Jinja2 Demo{% endblock %}
+
+{% block content %}
+<section class="container">
+  <h2>Jinja2: loops, conditionals and comments</h2>
+  <p>{# This is a Jinja comment and won't render #}</p>
+  <ul>
+    {% for item in items %}
+      {% if item.qty > 0 %}
+      <li>{{ item.name }} — {{ item.qty }} in stock</li>
+      {% else %}
+      <li>{{ item.name }} — <em>out of stock</em></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

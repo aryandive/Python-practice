@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Gallery — Flask Practice{% endblock %}
+
+{% block content %}
+<section class="container">
+  <h2>Gallery</h2>
+  <p>A simple grid of placeholder images.</p>
+  <div class="gallery-grid">
+    {% for i in images %}
+    <div class="card">
+      <img src="{{ i }}" alt="Image {{ loop.index }}">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}Flask Site{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+      <a class="logo" href="/">FlaskSite</a>
+      <a href="/about">About</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; {{ current_year }} Flask Practice</small>
+  </footer>
+</body>
+</html>
